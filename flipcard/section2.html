@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+
+    <style>
+        /* container2 */
+
+        * {
+            font-family: 'Ubuntu';
+        }
+
+        .container2 {
+            height: 90vh;
+            width: 100%;
+            //border:1px solid black;
+            font-family: 'Ubuntu'
+        }
+
+        .cards {
+            height: 60vh;
+            width: 80%;
+            margin: 0px auto;
+            //border:10px solid black;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+            .cards h2 {
+                margin-bottom: 15px;
+            }
+
+            .cards p {
+                line-height: 25px;
+            }
+
+        .card {
+            //border:1px solid black;
+            width: 30%;
+            height: 55%;
+            margin: 0px auto;
+            text-align: center;
+            padding: 30px 30px;
+            border-radius: 8px;
+            color: white;
+            perspective: 1000px;
+            color: black;
+            //background:transparent;
+        }
+
+
+
+        .icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .belowcards {
+            height: 30vh;
+            //border:1px solid red;
+            width: 80%;
+            margin: 0px auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .bcleft {
+            width: 40%;
+            height: 100%;
+        }
+
+            .bcleft span {
+                color: crimson;
+                font-size: 18px;
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            .bcleft h2 {
+                font-size: 40px;
+                width: 400px;
+            }
+
+        .bcright {
+            width: 60%;
+            height: 100%;
+        }
+
+            .bcright p {
+                font-size: 20px;
+                line-height: 30px;
+                margin-bottom: 10px;
+            }
+
+        .cardinner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            
+        }
+
+        .card:hover .cardinner {
+            transform: rotateY(180deg);
+        }
+
+        .cardfront, .cardback {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            //-webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+            padding: 10px 0px;
+        }
+
+        .cardfront {
+            background-color: crimson;
+            color: white;
+            
+        }
+
+        .card1color{
+            background-color:crimson;
+        }
+
+        .card2color {
+            background-color: yellowgreen;
+        }
+
+        .card3color{
+            background-color: darkslategray;
+        }
+
+
+
+        .cardback {
+            background-color: white;
+            color: black;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container2">
+        <div class="cards">
+            <div class="card">
+                <div class="cardinner">
+                    <div class="cardfront card1color">
+                        <i class="fas fa-pizza-slice icon"></i>
+                        <h2>For Food Lovers</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                    <div class="cardback">
+                        <i class="fas fa-pizza-slice icon"></i>
+                        <h2>For Food Lovers</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                </div>
+                </div>
+            <div class="card">
+                <div class="cardinner">
+                    <div class="cardfront card2color">
+                        <i class="fas fa-hamburger icon"></i>
+                        <h2>Diversity In Food</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                    <div class="cardback">
+                        <i class="fas fa-hamburger icon"></i>
+                        <h2>Diversity In Food</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <div class="cardinner">
+                    <div class="cardfront card3color">
+                        <i class="fas fa-clock icon"></i>
+                        <h2>Working Hours</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                    <div class="cardback">
+                        <i class="fas fa-clock icon"></i>
+                        <h2>Working Hours</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="belowcards">
+            <div class="bcleft">
+                <span>Good and Healthy Life</span>
+                <h2>We Serve The Best Food In Town</h2>
+            </div>
+            <div class="bcright">
+                <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.</p>
+                <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

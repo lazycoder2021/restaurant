@@ -1,0 +1,1161 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .container1 {
+            height: 100vh;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        /* owl carousel */
+
+        .image-wrapper {
+            height: 100vh;
+            width: 100%;
+            position:relative;
+            z-index:1;
+        }
+
+        .image-wrapper img{
+            width:100%; 
+            height:100%;
+            object-fit:cover;
+            z-index:-100;
+        }
+
+        .banner {
+            //border: 1px solid white;
+            width: 500px;
+            color: white;
+            padding: 15px 10px;
+            background: #84b813;
+            border-radius: 8px;
+        }
+
+            .banner span {
+                display: block;
+                margin-top: 10px;
+                font-size: 22px;
+                border: 1px solid white;
+                padding: 12px 6px;
+                width: 200px;
+                text-align: center;
+                border-radius:8px;
+                transition:0.4s;
+                margin-left:10px;
+            }
+
+                .banner span:hover {
+                    background-color: white;
+                    color: #84b813;
+                }
+
+            .banner h2 {
+                font-size: 72px;
+                margin-left: 10px;
+            }
+
+            .banner p {
+                font-size: 22px;
+                line-height: 30px;
+                margin: 5px 0px;
+                margin-left: 10px;
+            }
+
+        .banner1{
+            //color:white;
+            position:absolute;
+            top:30%;
+            left:10%;
+            z-index:1;
+            
+        }
+
+        .banner2 {
+            //color: white;
+            position: absolute;
+            top: 30%;
+            left: 60%;
+        }
+
+        .banner3 {
+            //color: white;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+        }
+
+        /* container2 */
+
+        * {
+            font-family: 'Ubuntu';
+        }
+
+        .container2 {
+            height: 110vh;
+            width: 100%;
+            //border:1px solid black;
+            font-family: 'Ubuntu'
+        }
+
+        .cards {
+            height: 60vh;
+            width: 90%;
+            margin: 0px auto;
+            
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+            .cards h2 {
+                margin-bottom: 15px;
+            }
+
+            .cards p {
+                line-height: 25px;
+            }
+
+        .card {
+            //border:1px solid black;
+            width: 30%;
+            height: 55%;
+            margin: 0px auto;
+            text-align: center;
+            padding: 30px 30px;
+            border-radius: 8px;
+            color: white;
+            perspective: 1000px;
+            color: black;
+            //background:transparent;
+        }
+
+
+
+        .icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .belowcards {
+            height: 45vh;
+            //border:1px solid red;
+            width: 80%;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .bcleft {
+            width: 40%;
+            height: 100%;
+        }
+
+            .bcleft span {
+                color: crimson;
+                font-size: 18px;
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            .bcleft h2 {
+                font-size: 40px;
+                width: 400px;
+            }
+
+        .bcright {
+            width: 60%;
+            height: 100%;
+        }
+
+            .bcright p {
+                font-size: 20px;
+                line-height: 30px;
+                margin-bottom: 10px;
+            }
+
+        .cardinner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            
+        }
+
+        .card:hover .cardinner {
+            transform: rotateY(180deg);
+        }
+
+        .cardfront, .cardback {
+            position: absolute;
+            width: 100%;
+            height: 140%;
+            //-webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+            padding: 20px 0px;
+            border-radius: 8px;
+        }
+
+        .cardfront {
+            background-color: crimson;
+            color: white;
+        }
+
+        .card1color {
+            background-color: crimson;
+        }
+
+        .card2color {
+            background-color: yellowgreen;
+        }
+
+        .card3color {
+            background-color: darkslategray;
+        }
+
+
+
+        .cardback {
+            background-color: white;
+            color: black;
+            transform: rotateY(180deg);
+        }
+
+        /* container 3*/
+
+        .container3{
+            height:100vh;
+            width:100%;
+            background-image:url('dinner1.jpg');
+            position:relative;
+            background-size:cover;
+            background-position:center center;
+            
+        }
+
+            .container3 form {
+                position: absolute;
+                width: 600px;
+                height: 400px;
+                background: white;
+                color: black;
+                top: 300px;
+                right: 40px;
+                box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                //border-radius:15px;
+                opacity:0.8;
+                padding:40px;
+            }
+
+            form h2{
+                font-weight:100;
+                font-size:40px;
+                margin-bottom:10px;
+            }
+
+            form p{
+                font-size:20px;
+                //width:400px;
+                margin-bottom:15px;
+                line-height:25px;
+            }
+
+            .form-wrapper{
+                //border:1px solid black;
+                display:flex;
+                flex-direction:column;
+                align-items:flex-start;
+            }
+
+            .form-control{
+                display:flex;
+                justify-content:flex-start;
+                align-items:center;
+                width:100%;
+                margin:10px 0px;
+            }
+            
+            .form-control input{
+                width:48%;
+                font-size:16px;
+                margin:0px auto;
+            }
+
+            .form-control input{
+                outline:none;
+            }
+
+                .form-control textarea {
+                    width: 98%;
+                    margin: 0px auto;
+                    font-size:16px;
+                    outline:none;
+                }
+
+                .btn{
+                    margin-left:6px;
+                    padding:6px 12px;
+                    background:crimson;
+                    color:white;
+                    text-transform:uppercase;
+                }
+
+
+                /* container 4*/
+
+                .container4{
+                    height:80vh; 
+                    width:100%; 
+                    position:relative;
+                }
+
+                .container4header{
+                    //border:1px solid black;
+                    width:100%;
+                    text-align:center;
+                    margin-top:100px;
+                }
+
+                .container4header span{
+                    color:crimson;
+                    font-weight:600;
+                    font-size:20px;
+                    letter-spacing:1.2px;
+                }
+
+                    .container4header h2 {
+                        margin-top: 10px;
+                        font-size: 40px;
+                        letter-spacing: 1.0px;
+                    }
+
+                    .container4content{
+                        width:70%;
+                        //border:1px solid black;
+                        margin:100px auto;
+                        height:40vh;
+                        display:flex;
+                        flex-direction:column;
+                        align-items:flex-start;
+                        //position:relative;
+                    }
+
+                    .container4topcontent, .container4bottomcontent{
+                        width:100%; 
+                        height:50%; 
+                        //border:1px solid black;
+                        display:flex;
+                        justify-content:space-between; 
+                        align-items:center;
+                    }
+
+                    .topcontent{
+                        display:flex;
+                        width:30%;
+                        justify-content:space-between;
+                        align-items:center;
+                    }
+
+        .bottomcontent{
+            display: flex;
+            width: 30%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topcontenticon, .bottomcontenticon{
+            padding:5px;
+            width:60px;
+            height:60px;
+            border-radius:50%;
+            border:1px solid black;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:darkslategray; 
+            color:white;
+            
+        }
+
+        .tci, .bci{
+            font-size:32px;
+            padding:10px;
+        }
+
+        .topcontenttext, .bottomcontenttext{
+            //border:1px solid red;
+            margin-left:10px;
+        }
+
+        /* container 5*/
+
+        .container5{
+            height:40vh;
+            width:100%;
+            border:1px solid black;
+            background:url('classic_cake.jpg'); 
+            background-attachment:fixed;
+            background-size:cover;
+            background-position:center center;
+            position:relative;
+            color:white;
+        }
+
+        .overlay{
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.5);
+            //z-index:-2;
+        }
+
+        .container5 .stats{
+            border:1px solid white;
+            height:100%;
+            width:100%; 
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            
+        }
+
+        .stat {
+            z-index: 200;
+            text-align:center;
+        }
+
+        .stat h2{
+            font-size:40px;
+            margin-bottom:10px;
+        }
+
+        .stat p{
+            font-size:22px;
+        }
+
+        .container6{
+            height:80vh;
+            width:100%;
+            margin-bottom:100px;
+        }
+
+        .container6header{
+            width:100%;
+            text-align:center;
+            margin-top:100px;
+        }
+
+        .container6header h2{
+            font-size:40px;
+        }
+
+        .container6header p{
+            font-size:18px;
+            width:600px;
+            margin:10px auto;
+        }
+
+        .container6gallery{
+            height:60vh;
+            width:60%;
+            margin:50px auto;
+            //border:1px solid red;
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+
+        .container6galleryelement{
+            //border:1px solid black;
+            width:33.33%; 
+            height:50%; 
+            position:relative;
+            overflow:hidden;
+        }
+
+            
+
+
+
+            .container6galleryelement::after {
+                position: absolute;
+                top: 100%;
+                left: 100%;
+                height: 100%;
+                width: 0%;
+                content: '';
+                background-color: rgba(132,184,19,0.6);
+                transition: 0.4s;
+            }
+
+            .container6galleryelement:hover::after {
+                width: 100%;
+                content:'Food Item';
+                top:0%;
+                left:0%;
+            }
+
+       
+
+        .container6galleryelement img{
+            width:100%;
+            height:100%;
+            border:2px solid white;
+            object-fit:cover;
+        }
+
+
+        .container7{
+            height:100vh;
+            width:100%;
+            border:1px solid black;
+            background:url('wineglass.jpg');
+            background-size:cover;
+            background-position:center center;
+            position:relative;
+            
+        }
+
+        .container7header {
+            //border: 1px solid white;
+            width: 100%;
+            margin-top: 100px;
+            text-align: center;
+            color: white;
+            //z-index: 400;
+            
+        }
+
+        .container7header h2{
+            font-size:40px;
+        }
+
+        .container7header p{
+            font-size:18px;
+            width:600px;
+            margin:10px auto;
+        }
+
+        .container7content{
+            width:70%;
+            //border:1px solid white;
+            height:60vh;
+            margin:50px auto;
+        }
+
+        .testimonials{
+            display:flex;
+            justify-content:space-around; 
+            align-items:center;
+            width:100%;
+            height:100%;
+        }
+
+        .testimonial{
+            width:30%;
+            height:90%;
+            //border:1px solid red;
+            background:white;
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+            text-align:center;
+            transition:0.4s;
+        }
+
+        .testimonial:hover{
+            background:crimson;
+            color:white;
+        }
+
+        .testimonial:hover .testimonialtext h2{
+            color:white;
+        }
+
+        .testimonialicon{
+            text-align:center;
+            //border:1px solid black;
+            width:100%;
+            margin:40px 0px;
+        }
+
+        .left{
+            font-size:22px;
+            color:yellowgreen;
+        }
+
+       .testimonialtext img{
+           width:70px;
+           height:70px;
+           border-radius:50%;
+           margin:10px 0px;
+       }
+
+       .testimonialtext h2{
+           color:crimson;
+           font-size:20px;
+       }
+
+       .testimonialtext p{
+           font-size:16px;
+           line-height:30px;
+       }
+
+       .testimonialtext .name{
+           font-size:14px;
+       }
+
+       /* container 8*/
+
+       .container8{
+           height:100vh; 
+           width:70%;
+           margin:100px auto;
+           //border:10px solid black;
+           display:flex;
+           justify-content:flex-start; 
+           align-items:center;
+           flex-wrap:wrap;
+       }
+
+       .section8a, .section8b, .section8c, .section8d{
+           width:50%; 
+           height:50%;
+           //border:1px solid black;
+       }
+
+       
+
+       .section8a .owl-carousel img{
+           width:70%;
+           height:80%;
+           transition:0.4s;
+           border-radius:15px;
+       }
+
+       .section8a .owl-carousel img:hover{
+           transform:scale(1.1);
+       }
+
+       .section8b p{
+           margin-top:30px;
+           line-height:35px;
+           margin-bottom:30px;
+       }
+
+       .section8b span{
+           padding:10px 15px;
+           margin-top:10px;
+           border:1px solid black;
+           background-color:yellowgreen;
+           color:white;
+       }
+
+
+        .section8c p {
+            margin-top: 30px;
+            line-height: 35px;
+            margin-bottom: 30px;
+        }
+
+        .section8c span {
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: 1px solid black;
+            background-color: yellowgreen;
+            color: white;
+        }
+
+        .section8d .owl-carousel img {
+            width: 70%;
+            margin-left: 155px;
+            border-radius: 15px;
+            height: 80%;
+        }
+
+        .section8d .owl-carousel img:hover {
+            transform: scale(1.1);
+        }
+
+        .section8b{
+            text-align:right;
+        }
+
+        /* container 9*/
+
+        .container9{
+            width:100%; 
+            height:90vh;
+            background:url('contact.jpg'); 
+            background-position:center center; 
+            background-size:cover;
+            padding-top:0px;
+        }
+
+        .container9wrapper{
+            width:70%; 
+            height:85%; 
+            padding-top:20px;
+            margin:200px auto;
+            display:flex;
+            justify-content:flex-start;
+            align-items:center; 
+        }
+
+        .maps, .address{
+            
+            height:70%; 
+            width:100%;
+        }
+
+        .maps {
+            border: 5px solid white;
+        }
+
+        .address{
+            background:yellowgreen;
+            color:white;
+        }
+
+        .addresswrapper{
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+            margin-top:50px;
+            margin-left:50px;
+        }
+
+        .addresswrapper span{
+            display:block;
+            margin-bottom:20px;
+        }
+
+        .addresswrapper h2{
+            font-size:30px;
+            margin-bottom:20px;
+        }
+
+        .restaurant{
+            margin-bottom:10px;
+        }
+
+        .phones {
+            margin-bottom: 10px;
+        }
+
+        .mails {
+            margin-bottom: 10px;
+        }
+
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container1">
+
+        <div class="owl-carousel">
+
+            <div class="image-wrapper">
+                <img src="left.jpg" class="owl-lazy" data-src="./left.jpg" />
+                <div class="banner banner1">
+                    <div class="banner-wrapper">
+                        <div class="banner-header">
+                            <h2>Burger</h2>
+                        </div>
+                        <div class="banner-paragraph">
+                            <p>One two three four, five six seven eight, nine ten eleven twelve, thirteen, fourteen, fifteen. One two three four, five six seven eight, nine ten.</p>
+                        </div>
+                        <span>Book Now</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="pizza.jpg" class="owl-lazy" data-src="./pizza.jpg" />
+                <div class="banner banner2" style="color:white;">
+                    <div class="banner-wrapper">
+                        <div class="banner-header">
+                            <h2>Pizza</h2>
+                        </div>
+                        <div class="banner-paragraph">
+                            <p>One two three four, five six seven eight, nine ten eleven twelve, thirteen, fourteen, fifteen. One two three four, five six seven eight, nine ten.</p>
+                        </div>
+                        <span>Book Now</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="image-wrapper">
+                <img src="right.jpg" class="owl-lazy" data-src="./right.jpg" />
+                <div class="banner banner3" style="color:white;">
+                    <div class="banner-wrapper">
+                        <div class="banner-header">
+                            <h2>Salad</h2>
+                        </div>
+                        <div class="banner-paragraph">
+                            <p>One two three four, five six seven eight, nine ten eleven twelve, thirteen, fourteen, fifteen. One two three four, five six seven eight, nine ten.</p>
+                        </div>
+                        <span>Book Now</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container2">
+        <div class="cards">
+            <div class="card">
+                <div class="cardinner">
+                    <div class="cardfront card1color">
+                        <i class="fas fa-pizza-slice icon"></i>
+                        <h2>For Food Lovers</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                    <div class="cardback">
+                        <i class="fas fa-pizza-slice icon"></i>
+                        <h2>For Food Lovers</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardinner">
+                    <div class="cardfront card2color">
+                        <i class="fas fa-hamburger icon"></i>
+                        <h2>Diversity In Food</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                    <div class="cardback">
+                        <i class="fas fa-hamburger icon"></i>
+                        <h2>Diversity In Food</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <div class="cardinner">
+                    <div class="cardfront card3color">
+                        <i class="fas fa-clock icon"></i>
+                        <h2>Working Hours</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                    <div class="cardback">
+                        <i class="fas fa-clock icon"></i>
+                        <h2>Working Hours</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.Aenean sollicitudin۔</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="belowcards">
+            <div class="bcleft">
+                <span>Good and Healthy Life</span>
+                <h2>We Serve The Best Food In Town</h2>
+            </div>
+            <div class="bcright">
+                <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.</p>
+                <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container3">
+        <form>
+            <div class="formheader">
+                <h2>Book Your Table</h2>
+                <p>Give us your details and we will get back to you.</p>
+            </div>
+            <div class="form-wrapper">
+                <div class="form-control">
+                    <input type="text" placeholder="Name" />
+                    <input type="text" placeholder="Email" />
+                </div>
+                <div class="form-control">
+                    <input type="text" placeholder="Date" />
+                    <input type="text" placeholder="No Of People" />
+                </div>
+                <div class="form-control">
+                    <textarea cols="30" rows="5" placeholder="Message:"></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container4">
+        <div class="container4header">
+            <span>We Are Professionals</span>
+            <h2>Our Specialities</h2>
+        </div>
+
+        <div class="container4content">
+            
+            <div class="container4topcontent">
+                <div class="topcontent">
+                    <div class="topcontenticon tci">
+                        <i class="fas fa-hamburger"></i>
+                    </div>
+                    <div class="topcontenttext">
+                        <h3>Hamburger</h3>
+                        <p>Phasellus eu scelerisque ligula. Pellentesque sollicitudin quis orci laoreet vehicula.</p>
+                    </div>
+                </div>
+                <div class="topcontent">
+                    <div class="topcontenticon tci">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <div class="topcontenttext">
+                        <h3>Muffins</h3>
+                        <p>Phasellus eu scelerisque ligula. Pellentesque sollicitudin quis orci laoreet vehicula.</p>
+                    </div>
+                </div>
+                <div class="topcontent">
+                    <div class="topcontenticon tci">
+                        <i class="fas fa-hotdog"></i>
+                    </div>
+                    <div class="topcontenttext">
+                        <h3>Hotdogs</h3>
+                        <p>Phasellus eu scelerisque ligula. Pellentesque sollicitudin quis orci laoreet vehicula.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container4bottomcontent">
+                <div class="bottomcontent">
+                    <div class="bottomcontenticon">
+                        <i class="fas fa-pizza-slice bci"></i>
+                    </div>
+                    <div class="bottomcontenttext">
+                        <h3>Pizza</h3>
+                        <p>Phasellus eu scelerisque ligula. Pellentesque sollicitudin quis orci laoreet vehicula.</p>
+                    </div>
+                </div>
+                <div class="bottomcontent">
+                    <div class="bottomcontenticon">
+                        <i class="fas fa-ice-cream bci"></i>
+                    </div>
+                    <div class="bottomcontenttext">
+                        <h3>Ice Creams</h3>
+                        <p>Phasellus eu scelerisque ligula. Pellentesque sollicitudin quis orci laoreet vehicula.</p>
+                    </div>
+                </div>
+                <div class="bottomcontent">
+                    <div class="bottomcontenticon bci">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="bottomcontenttext">
+                        <h3>Tea and Coffee</h3>
+                        <p>Phasellus eu scelerisque ligula. Pellentesque sollicitudin quis orci laoreet vehicula.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="container5">
+        <div class="stats">
+            <div class="stat">
+                <h2>1538</h2>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat">
+                <h2>1006</h2>
+                <p>Cooked Items</p>
+            </div>
+            <div class="stat">
+                <h2>2115</h2>
+                <p>Food Delivered</p>
+            </div>
+            <div class="stat">
+                <h2>170</h2>
+                <p>Cups of Coffee</p>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+
+    <div class="container6">
+        <div class="container6header">
+            <h2>Our Food Gallery</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat ligula.</p>
+        </div>
+        <div class="container6gallery">
+            <div class="container6galleryelement">
+                <img src="1.jpg" />
+            </div>
+            <div class="container6galleryelement">
+                <img src="2.jpg" />
+            </div>
+            <div class="container6galleryelement">
+                <img src="3.jpg" />
+            </div>
+            <div class="container6galleryelement">
+                <img src="4.jpg" />
+            </div>
+            <div class="container6galleryelement">
+                <img src="pizza.jpg" />
+            </div>
+            <div class="container6galleryelement">
+                <img src="classic_cake.jpg" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container7">
+        <div class="container7header">
+            <h2>What Our Customers Say</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat ligula.</p>
+        </div>
+
+        <div class="container7content">
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <div class="testimonialicon">
+                            <i class="fas fa-quote-left left"></i>
+                        </div>
+                        <div class="testimonialtext">
+                            <p>One two three, four five six, seven eight nine, ten eleven twelve, thirteen fourteen and fifteen, six, seven, eight and nine, and ten and eleven and one.</p>
+                            <img src="11.jpg"/>
+                            <h2>Customer Name</h2>
+                            <p class="name">New York, USA</p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonialicon">
+                            <i class="fas fa-quote-left left"></i>
+                        </div>
+                        <div class="testimonialtext">
+                            <p>One two three, four five six, seven eight nine, ten eleven twelve, thirteen fourteen and fifteen, six, seven, eight and nine, and ten and eleven and one.</p>
+                            <img src="22.jpg" />
+                            <h2>Customer Name</h2>
+                            <p class="name">New York, USA</pclass="name">
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonialicon">
+                            <i class="fas fa-quote-left left"></i>
+                        </div>
+                        <div class="testimonialtext">
+                            <p>One two three, four five six, seven eight nine, ten eleven twelve, thirteen fourteen and fifteen, six, seven, eight and nine, and ten and eleven and one.</p>
+                            <img src="33.jpg" />
+                            <h2>Customer Name</h2>
+                            <p class="name">New York, USA</pclass="name">
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+    </div>
+
+
+    <div class="container8">
+        <div class="section8a">
+            <div class="owl-carousel">
+                <img src="1.jpg" class="owl-lazy" data-src="./1.jpg" />
+                <img src="2.jpg" class="owl-lazy" data-src="./2.jpg" />
+                <img src="4.jpg" class="owl-lazy" data-src="./4.jpg" />
+            </div>
+        </div>
+        <div class="section8b">
+            <div class="section8bwrapper">
+            <h2>Full of Spices and Taste</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <span>Learn More</span>
+            </div>
+        </div>
+        <div class="section8c">
+            <div class="section8dwrapper">
+                <h2>Midnight Deals</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <span>Learn More</span>
+            </div>
+        </div>
+        <div class="section8d">
+            <div class="owl-carousel">
+                <img src="1.jpg" class="owl-lazy" data-src="./1.jpg" />
+                <img src="2.jpg" class="owl-lazy" data-src="./2.jpg" />
+                <img src="4.jpg" class="owl-lazy" data-src="./4.jpg" />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container9">
+        <div class="container9wrapper">
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15544.670534208219!2d80.2413373770017!3d13.088560252466394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265dca1806f09%3A0x2b7e01875ad82bf4!2sPurasaiwakkam%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1649475300982!5m2!1sen!2sin" width="600" height="365" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="address">
+                <div class="addresswrapper">
+                    <span>Lorem Ipsum Dolor Sit Amet Consectetur</span>
+                    <div class="restaurant">
+                        <h2>Moonlight Restaurant</h2>
+                        <p>123 Mudali Street, Purasawalkam, Chennai</p>
+                    </div>
+                    <div class="phones">
+                        <p>Office Telephone: 001 234567890</p>
+                        <p>Mobile:1234567890</p>
+                    </div>
+                    <div class="mails">
+                        <p>Mail:moonlight@gmail.com</p>
+                        <p>Inquiries:moonlightenquiries@gmail.com</p>
+                    </div>
+
+                    <div class="hours">
+                        <p>Mon-Fri: 9am to 11pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+
+        $('.owl-carousel').owlCarousel({
+            items: 1,
+            lazyLoad: true,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplaySpeed: 500
+        })
+    </script>
+
+</body>
+</html>
