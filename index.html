@@ -17,6 +17,10 @@
             font-family: 'Ubuntu', sans-serif;
         }
 
+        .wrapper{
+            //border:10px solid black;
+        }
+
         .container1 {
             height: 100vh;
             width: 100%;
@@ -118,7 +122,6 @@
             height: 60vh;
             width: 90%;
             margin: 0px auto;
-            
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -768,11 +771,248 @@
         }
 
 
+
+        @media only screen and (max-width:480px) {
+
+            .wrapper{
+                overflow:hidden; 
+            }
+
+            .container1 {
+                width:480px;
+                //border:10px solid black;
+            }
+
+            .image-wrapper{
+                width:480px; 
+            }
+
+            .image-wrapper img{
+                width:100%; 
+            }
+
+            .banner1 {
+                //color:white;
+                position: absolute;
+                top: 15%;
+                left: 5%;
+                z-index: 1;
+            }
+
+            .banner2 {
+                //color: white;
+                position: absolute;
+                top: 30%;
+                left: 10%;
+            }
+
+            .banner3 {
+                //color: white;
+                position: absolute;
+                top: 30%;
+                left: 35%;
+            }
+
+            .banner {
+                //border: 1px solid white;
+                width: 300px;
+                color: white;
+                padding: 15px 10px;
+                background: #84b813;
+                border-radius: 8px;
+                opacity:0.7;
+            }
+
+            .banner h2{
+                font-size:36px;
+            }
+
+            .container2{
+                //border:10px solid black;
+                height:500px;
+                margin-bottom:950px;
+                width:480px;
+            }
+
+            .container2 .cards{
+                flex-direction:column;
+                height:180%;
+            }
+
+            .container2 .cards .card{
+                width:100%; 
+                margin:20px 0px;
+            }
+
+            .belowcards{
+                margin-top:100px;
+                flex-direction:column; 
+            }
+
+            .bcleft, .bcright{
+                width:100%; 
+            }
+
+            .bcleft h2{
+                font-size:26px;
+                margin-bottom:15px;
+            }
+
+            .container3{
+                width:480px;
+            }
+
+            .container3 form{
+                width:450px;
+                right:40px;
+                top:150px;
+                left:30px;
+            }
+
+            .container4{
+                width:480px;
+                //border:10px solid black;
+                margin-bottom:0px;
+                height:120vh;
+            }
+
+            .container4content{
+                height:70vh;
+                margin:50px auto; 
+            }
+
+            .container4header h2{
+                font-size:30px;
+            }
+
+            .container4topcontent {
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                //border: 1px solid black;
+                margin-bottom:40px;
+            }
+
+            .container4topcontent .topcontent{
+                width:100%; 
+            }
+
+            .container4bottomcontent {
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                //border: 1px solid black;
+            }
+
+                .container4bottomcontent .bottomcontent {
+                    width: 100%;
+                }
+
+                .topcontent, .bottomcontent{
+                    margin:10px 0px;
+                    
+                }
+
+                .topcontenttext{
+                    margin-left:18px;
+                }
+
+                .bottomcontenttext{
+                    margin-left:15px;
+                }
+
+                .stat p{
+                    font-size:16px;
+                }
+
+                .container6{
+                    //border:10px solid black;
+                    margin-bottom:20px;
+                    width:480px;
+                }
+
+                .container6header h2{
+                    font-size:26px;
+                }
+
+                .container6header p{
+                    font-size:15px;
+                    //border:1px solid black;
+                    width:480px;
+                    padding:0px 10px;
+                    line-height:20px;
+                }
+
+                .container6gallery {
+                    width:90%; 
+                }
+
+                .container7{
+                    width:480px;
+                    height:90vh;
+                }
+
+                .container7header{
+                    margin-top:50px;
+                }
+
+                .container7header h2{
+                    font-size:32px;
+                }
+
+                .container7header p{
+                    font-size:15px;
+                }
+
+                .container7content{
+                    width:90%; 
+                }
+
+                .testi1{
+                    width:100%; 
+                }
+
+                .testi2, .testi3{
+                    display:none; 
+                }
+
+                .container8{
+                    width:450px; /* turn this to 460px!!!!!!!!! */
+                }
+
+                .section8c, .section8d{
+                    margin-top:80px;
+                }
+
+                .container9{
+                    margin-bottom:-200px;
+                    width:480px;
+                    //border:10px solid black;
+                    height:100%; 
+                }
+
+                .container9wrapper{
+                    width:100%; 
+                    flex-direction:column;
+                    
+                }
+
+                .address{
+                    padding-bottom:50px;
+                }
+
+
+
+
+        }
+
+
         
         
     </style>
 </head>
 <body>
+    <div class="wrapper">
     <div class="container1">
 
         <div class="owl-carousel">
@@ -1040,7 +1280,7 @@
 
         <div class="container7content">
                 <div class="testimonials">
-                    <div class="testimonial">
+                    <div class="testimonial testi1">
                         <div class="testimonialicon">
                             <i class="fas fa-quote-left left"></i>
                         </div>
@@ -1051,7 +1291,7 @@
                             <p class="name">New York, USA</p>
                         </div>
                     </div>
-                    <div class="testimonial">
+                    <div class="testimonial testi2">
                         <div class="testimonialicon">
                             <i class="fas fa-quote-left left"></i>
                         </div>
@@ -1062,7 +1302,7 @@
                             <p class="name">New York, USA</pclass="name">
                         </div>
                     </div>
-                    <div class="testimonial">
+                    <div class="testimonial testi3">
                         <div class="testimonialicon">
                             <i class="fas fa-quote-left left"></i>
                         </div>
@@ -1140,7 +1380,7 @@
         </div>
     </div>
 
-
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
