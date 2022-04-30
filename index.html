@@ -768,8 +768,9 @@
         @media only screen and (max-width:480px) {
 
             .wrapper {
-                overflow: hidden;
+                overflow-x: hidden;
                 width:480px;
+                //border:10px solid black;
             }
 
             .container1 {
@@ -831,20 +832,25 @@
                 .container2 .cards {
                     flex-direction: column;
                     height: 180%;
+                    margin:0px auto;
                 }
 
                     .container2 .cards .card {
                         width: 100%;
-                        margin: 20px 0px;
+                        margin: 20px auto;
                     }
 
             .belowcards {
-                margin-top: 100px;
+                margin-top: 100px auto 0px;
                 flex-direction: column;
             }
 
             .bcleft, .bcright {
                 width: 100%;
+            }
+
+            .bcleft{
+                margin-top:30px;
             }
 
                 .bcleft h2 {
@@ -854,19 +860,21 @@
 
             .container3 {
                 width: 480px;
+                margin:auto;
             }
 
                 .container3 form {
                     width: 450px;
-                    right: 40px;
+                    //right: 40px;
                     top: 150px;
-                    left: 30px;
+                    left: 0px;
+                    margin:auto;
                 }
 
             .container4 {
                 width: 480px;
                 //border:10px solid black;
-                margin-bottom: 0px;
+                margin: 0px auto;
                 height: 120vh;
             }
 
@@ -914,13 +922,17 @@
                 margin-left: 15px;
             }
 
+            .stat h2{
+                font-size:32px;
+            }
+
             .stat p {
                 font-size: 16px;
             }
 
             .container6 {
                 //border:10px solid black;
-                margin-bottom: 20px;
+                margin: 0px auto 20px;
                 width: 480px;
             }
 
@@ -943,6 +955,7 @@
             .container7 {
                 width: 480px;
                 height: 90vh;
+                margin:auto;
             }
 
             .container7header {
@@ -971,6 +984,8 @@
 
             .container8 {
                 width: 450px; /* turn this to 460px!!!!!!!!! */
+                //border:1px solid black;
+                margin:60px auto;
             }
 
             .section8c, .section8d {
